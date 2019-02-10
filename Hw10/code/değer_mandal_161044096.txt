@@ -1,0 +1,25 @@
+               DEÐER_MANDAL_161044096
+
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers,Orders
+WHERE Customers.CustomerID = Orders.CustomerID;
+
+
+
+SELECT Employees.LastName,Employees.FirstName,Orders.OrderID
+FROM Employees,Orders
+WHERE Employees.EmployeeID = Orders.EmployeeID;
+
+
+
+
+SELECT Products.ProductName,Shippers.ShipperName,Customers.Country
+FROM Products,Shippers, Customers, Orders, and OrderDetails
+WHERE (Customers.CustomerID = Orders.CustomerID) and
+	(OrderDetails.ProductID = Product.ProductID) and
+	(OrderDetails.OrderID = Order.OrderID) and
+	(Order.ShipperID = Shippers.ShipperID) ;
+
+
+
+
